@@ -1,0 +1,18 @@
+- [ ] Provision challenges in Kubernetes
+  - [ ] Deploy
+  - [ ] Update
+  - [ ] Status
+- [ ] Support Challenge Types
+  - [ ] Offline
+  - [ ] Web (via HTTP/HTTPS LB)
+  - [ ] TCP (via service)
+- [ ] Challenge edge cases
+  - [ ] Multiple flags/challenge
+- [ ] Multiple cloud providers
+  - [ ] GCloud (via cli)
+  - [ ] Kubernetes (raw)
+- [ ] Build Docker Images
+- [ ] Support Infrastructure Images (non-challenge)
+- [ ] Deploy sidecars
+  - [ ] Webbot
+  - [ ] CloudSQL Proxy
