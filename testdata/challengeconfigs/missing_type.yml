@@ -1,0 +1,7 @@
+name: Sample HTTP Challenge
+version: 1
+author: matir
+deployment:
+  port: 8080
+description:
+  Blah blah blah.
