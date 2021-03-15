@@ -1,0 +1,6 @@
+hosting:
+  name: gcloud
+scoreboard:
+  name: ctfscoreboard
+  url: https://localhost:3000/
+challenge_domain: challenges.ctftk.example
