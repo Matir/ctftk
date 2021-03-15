@@ -4,6 +4,8 @@ import (
 	"os"
 	"path"
 	"runtime"
+	"strings"
+	"testing"
 )
 
 func GetTestdataDir() string {
@@ -22,4 +24,17 @@ func MustOpenTestdataFile(filename string) *os.File {
 		panic(err)
 	}
 	return fp
+}
+
+func ExpectErrorContains(t *testing.T, e error, s string) bool {
+	if e == nil {
+		t.Fatalf("Expected error containing %s, got nil.", s)
+		return false
+	}
+	eStr := e.Error()
+	if !strings.Contains(eStr, s) {
+		t.Fatalf("Expected error containing %s, got %s", s, eStr)
+		return false
+	}
+	return true
 }

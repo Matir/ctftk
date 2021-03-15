@@ -23,10 +23,11 @@ func TestValidConfigLoads(t *testing.T) {
 }
 
 func TestInvalidConfigs(t *testing.T) {
-	badConfigs := []string{
-		"rootconfig/config_noversion.yml",
+	badConfigs := map[string]string{
+		"rootconfig/config_noversion.yml": "Version is required",
+		"rootconfig/config_extra.yml":     "field unknown_field not found",
 	}
-	for _, cfgPath := range badConfigs {
+	for cfgPath, expError := range badConfigs {
 		// This function is here so each defer will be closed within that iteration
 		// of the loop.
 		func() {
@@ -42,6 +43,7 @@ func TestInvalidConfigs(t *testing.T) {
 			if _, ok := err.(ConfigError); !ok {
 				t.Fatalf("Loading an invalid config, got error, but not of type ConfigError: %v", err)
 			}
+			testdata.ExpectErrorContains(t, err, expError)
 		}()
 	}
 }

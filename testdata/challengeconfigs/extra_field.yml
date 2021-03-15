@@ -1,0 +1,9 @@
+name: Sample HTTP Challenge
+version: 1
+author: matir
+type: http
+deployment:
+  port: 8080
+description:
+  Blah blah blah.
+unknown_field: hello
