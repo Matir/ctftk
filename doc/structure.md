@@ -9,9 +9,3 @@
     - kubernetes: Raw kubernetes
   - scoreboard: Scoreboard providers
     - ctfscoreboard: support for google.com/ctfscoreboard
-
-## TODO
-
-- Sidecars?
-- Non-challenge containers?
-- Network Policy?

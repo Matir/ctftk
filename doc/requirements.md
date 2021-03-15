@@ -16,3 +16,9 @@
 - [ ] Deploy sidecars
   - [ ] Webbot
   - [ ] CloudSQL Proxy
+- [ ] Provision Underlying Resources
+  - [ ] IP Allocation
+  - [ ] k8s cluster setup
+  - [ ] DNS Entries
+  - [ ] Network Policies
+- [ ] Deploy non-challenge containers
