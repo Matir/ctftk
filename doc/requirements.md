@@ -1,3 +1,14 @@
+## Design choices
+
+* Only Kubernetes-Based
+  * Just too hard to decouple concepts, k8s is platform independent
+  * Direct k8s or using a cloud
+* Initial support for
+  * Gcloud
+  * CTFScoreboard
+
+## Features/TODO
+
 - [ ] Provision challenges in Kubernetes
   - [ ] Deploy
   - [ ] Update
@@ -9,10 +20,15 @@
 - [ ] Challenge edge cases
   - [ ] Multiple flags/challenge
 - [ ] Multiple cloud providers
-  - [ ] GCloud (via cli)
-  - [ ] Kubernetes (raw)
+  - [ ] GCloud (via cli??)
+  - [ ] Kubernetes (via api)
 - [ ] Build Docker Images
-- [ ] Support Infrastructure Images (non-challenge)
+- [ ] Support Infrastructure Images/Containers (non-challenge)
+    - [ ] Deploy non-challenge containers
+    - [ ] Types
+      - [ ] Sidecar
+      - [ ] Container (i.e., deployment only)
+      - [ ] Service (i.e., deployment + service)
 - [ ] Deploy sidecars
   - [ ] Webbot
   - [ ] CloudSQL Proxy
@@ -21,4 +37,6 @@
   - [ ] k8s cluster setup
   - [ ] DNS Entries
   - [ ] Network Policies
-- [ ] Deploy non-challenge containers
+  - [ ] k8s ingress
+- [ ] Local Run
+  - [ ] Support running challenges locally via podman/docker
