@@ -21,6 +21,10 @@ func NewGCloudProvider(cfg *parser.RootConfig) (*GCloudProvider, error) {
 	}, nil
 }
 
+func (gc *GCloudProvider) String() string {
+	return "GCloudProvider"
+}
+
 func init() {
 	hosting.RegisterHostingProvider("gcloud", func(cfg *parser.RootConfig) (hosting.HostingProvider, error) {
 		return NewGCloudProvider(cfg)
