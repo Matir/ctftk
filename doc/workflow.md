@@ -15,13 +15,20 @@
 
 ## Challenge Deployment
 
-1. Build Container
+1. Build Container(s)
 2. Push container to registry
 3. Launch deployment
 4. Launch service
+5. Push to scoreboard
 
 ## Challenge Update
 
-1. Build Container
+Options:
+  - Force rebuild
+  - Only scoreboard
+  - Only k8s
+
+1. Build Container(s)
 2. Push container to registry
 3. Push update to deployment
+4. Push update to service
